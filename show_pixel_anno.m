@@ -32,7 +32,9 @@ for labelidx = 1:length(cur_labels)
     end
 end
 % imshow(gt_image); hold on; title('Ground Truth');
-imwrite(gt_image, sprintf('%d.jpg', i), 'jpg'); 
+name = strsplit(imname,'.');
+n = char(name(1))
+imwrite(gt_image, strcat(n,'.jpg'), 'jpg'); 
 
 end
 
